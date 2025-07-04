@@ -13,15 +13,21 @@ function App() {
 
   return (
     <Router>
+      {/* Pass the search handler to Header */}
       <Header onSearch={setSearchterm} />
+
       <Routes>
         <Route path="/" element={<Home searchTerm={searchterm} />} />
         <Route path="/home" element={<Home searchTerm={searchterm} />} />
+        
+        {/* ✅ Pass the search term to Dashboard */}
+        <Route path="/dashboard" element={<Dashboard searchQuery={searchterm} />} />
+
         <Route path="/addexpense" element={<AddExpense />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+
       <Footer />
     </Router>
   );

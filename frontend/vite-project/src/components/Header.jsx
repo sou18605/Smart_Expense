@@ -9,7 +9,6 @@ const Header = ({ onSearch }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm py-3">
       <div className="container">
-        {/* Logo / Brand - Left */}
         <NavLink className="navbar-brand d-flex align-items-center" to="/">
           <i className="fas fa-coins fa-lg mr-2"></i>
           <span style={{ fontWeight: "600", fontSize: "1.3rem", letterSpacing: "0.5px" }}>
@@ -17,7 +16,6 @@ const Header = ({ onSearch }) => {
           </span>
         </NavLink>
 
-        {/* Mobile Toggler */}
         <button
           className="navbar-toggler"
           type="button"
@@ -30,9 +28,7 @@ const Header = ({ onSearch }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navigation Links + Search */}
         <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-          {/* Nav Links */}
           <ul className="navbar-nav mr-auto ml-3">
             <li className="nav-item">
               <NavLink to="/home" className={({ isActive }) => `nav-link ${isActive ? "active font-weight-bold" : ""}`}>
@@ -61,7 +57,7 @@ const Header = ({ onSearch }) => {
             </li>
           </ul>
 
-          {/* Search Bar - Input and Button inline */}
+          {/* 🔍 Search Bar */}
           <form className="form-inline d-flex align-items-center my-2 my-lg-0">
             <input
               className="form-control mr-2"
